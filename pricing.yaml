@@ -1,0 +1,16 @@
+models:
+  large: "claude-sonnet-5"
+  small: "claude-haiku-4-5-20251001"
+  provider: "anthropic"
+
+claude-sonnet-5:
+  input_per_mtok: 2.00
+  output_per_mtok: 10.00
+  date: "2024-12-28"
+  source: "https://platform.claude.com/docs/en/models/overview"
+
+claude-haiku-4-5-20251001:
+  input_per_mtok: 1.00
+  output_per_mtok: 5.00
+  date: "2024-12-28"
+  source: "https://platform.claude.com/docs/en/models/overview"
