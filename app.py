@@ -3,7 +3,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-from modules import tokenizer_lens
+from modules import attention, tokenizer_lens
 
 load_dotenv()
 
@@ -25,7 +25,11 @@ with tab1:
         st.error(f"Tokenizer Lens could not start")
         st.info("Install the requirements, then restart Streamlit.")
 with tab2:
-    st.write("Attention Explorer - Coming soon")
+    try:
+        attention.render()
+    except Exception as exc:
+        st.error("Attention Explorer could not start")
+        st.exception(exc)
 with tab3:
     st.write("Sampling Playground - Coming soon")
 with tab4:

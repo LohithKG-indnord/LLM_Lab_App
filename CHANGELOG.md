@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 ## 29-09-2026
 
+**commit:** `feat: Created working attention explorer tab`
+
+### Added
+
+- Added a pure NumPy implementation of single-head scaled causal self-attention.
+- Added deterministic CRC32-based word embeddings and seeded projection matrices.
+- Added simple token handling that separates adjacent emojis while preserving joined emoji sequences.
+- Added Q, K, V, raw scores, scaled scores, causal mask, masked scores, attention weights, and `A × V` output.
+- Added mask and `QKᵀ / √dₖ` scaling controls.
+- Added side-by-side comparison heatmaps before and after the selected causal mask, with distinct colors.
+- Added tests for softmax rows, causal masking, determinism, dimensions, emoji tokenization, and scaling.
+
+### Updated
+
+- Updated `app.py` to render the Attention Explorer tab.
+- Updated the Attention Explorer UI to keep detailed matrices in a collapsed section.
+- Updated `HANDOFF.md` with the completed Attention Explorer workstream and validation status.
+
+## 29-09-2026
+
 **commit:** `feat: Created working tokenizer_lens tab`
 
 ### Added
